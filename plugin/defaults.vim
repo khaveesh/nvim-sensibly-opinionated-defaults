@@ -1,6 +1,9 @@
 augroup defaults
 	autocmd!
 
+	" Don't autocomment lines on <CR> or 'o/O'
+	autocmd Syntax * setlocal formatoptions-=ro
+
 	" Restore last file position
 	autocmd BufReadPost *
 				\ if line("'\"") >= 1 && line("'\"") <= line("$") && &ft !~# 'commit' && &diff == 0
@@ -22,8 +25,6 @@ set termguicolors
 
 " Relative number for easy jumps
 set relativenumber
-" Don't autocomment lines on <CR> or 'o/O'
-set formatoptions-=ro
 " Set 3 lines to the cursor - when moving vertically using j/k
 set scrolloff=3
 " Indicate that tab stops are used instead of spaces
