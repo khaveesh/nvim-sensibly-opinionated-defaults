@@ -1,3 +1,16 @@
+" nvim-sensibly-opinionated-defaults - The Courageous Neovim Plugin
+" Maintainer: Khaveesh N
+
+
+if exists('g:loaded_defaults')
+	finish
+endif
+
+let g:loaded_defaults = 1
+
+
+" Autocmds
+
 augroup defaults
 	autocmd!
 
@@ -10,7 +23,7 @@ augroup defaults
 				\ |   exe "normal! g`\""
 				\ | endif
 
-	" Highlight yanked region
+	" Highlight yanked region (Neovim only)
 	autocmd TextYankPost * silent lua vim.highlight.on_yank{higroup = 'IncSearch', timeout = 1000}
 augroup END
 
@@ -29,6 +42,8 @@ set mouse=a
 set relativenumber
 " Set 3 lines to the cursor - when moving vertically using j/k
 set scrolloff=3
+" Suppress startup & completion messages
+set shortmess+=Ic
 " Indicate that tab stops are used instead of spaces
 set list
 " Better search
@@ -41,5 +56,8 @@ set hidden
 set linebreak breakindent
 let &showbreak = '↳ '
 
-" Live Preview of substitute
+" Live Preview of substitute (Neovim only)
 set inccommand=nosplit
+
+" Always use LaTeX flavour instead of plaintex
+let g:tex_flavor = 'latex'
