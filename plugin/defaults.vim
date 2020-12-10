@@ -23,6 +23,8 @@ set termguicolors
 
 " EditorConfig
 
+" Enable full mouse support
+set mouse=a
 " Relative number for easy jumps
 set relativenumber
 " Set 3 lines to the cursor - when moving vertically using j/k
