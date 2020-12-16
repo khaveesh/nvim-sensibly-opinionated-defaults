@@ -1,6 +1,7 @@
-" nvim-sensibly-opinionated-defaults - The Courageous Neovim Plugin
-" Maintainer: Khaveesh N
-
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"     nvim-sensibly-opinionated-defaults - The Courageous Neovim Plugin
+"     Maintainer: Khaveesh N
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 if exists('g:loaded_defaults')
 	finish
@@ -9,7 +10,7 @@ endif
 let g:loaded_defaults = 1
 
 
-" Autocmds
+" Autocmds {{{
 
 augroup defaults
 	autocmd!
@@ -27,14 +28,18 @@ augroup defaults
 	autocmd TextYankPost * silent lua vim.highlight.on_yank{higroup = 'IncSearch', timeout = 1000}
 augroup END
 
+" }}}
 
-" Terminal Config
+
+" Terminal Config {{{
 
 " 24-Bit Truecolor
 set termguicolors
 
+" }}}
 
-" EditorConfig
+
+" EditorConfig {{{
 
 " Enable full mouse support
 set mouse=a
@@ -61,3 +66,5 @@ set inccommand=nosplit
 
 " Always use LaTeX flavour instead of plaintex
 let g:tex_flavor = 'latex'
+
+" }}}
