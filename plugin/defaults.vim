@@ -1,6 +1,6 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"     nvim-sensibly-opinionated-defaults - The Courageous Neovim Plugin
-"     Maintainer: Khaveesh N
+"     nvim-sensibly-opinionated-defaults - The Courageous Neovim Plugin      "
+"     Maintainer: Khaveesh N                                                 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 if exists('g:loaded_defaults')
@@ -31,40 +31,22 @@ augroup END
 " }}}
 
 
-" Terminal Config {{{
-
-" 24-Bit Truecolor
-set termguicolors
-
-" }}}
-
-
 " EditorConfig {{{
 
-" Enable full mouse support
-set mouse=a
-" Relative number for easy jumps
-set relativenumber
-" Set 3 lines to the cursor - when moving vertically using j/k
-set scrolloff=3
-" Suppress startup & completion messages
-set shortmess+=Ic
-" Indicate that tab stops are used instead of spaces
-set list
-" Better search
-set ignorecase smartcase
-" More natural split opening
-set splitbelow splitright
-" Quick switch buffer without worries
-set hidden
-" Wrap a long line into multiple lines with indent
-set linebreak breakindent
-let &showbreak = '↳ '
+set termguicolors           " Enable 24-Bit Truecolor
+set relativenumber          " Enable relative numbering for easy jumps
+set mouse=a                 " Enable full mouse support
+set scrolloff=3             " Set 3 lines to the cursor when moving vertically
+set list                    " Indicate tab stops
+set hidden                  " Quick switch buffer without worries
+set ignorecase smartcase    " Better search
+set splitbelow splitright   " More natural split positions
+set shortmess+=Ic           " Suppress startup & completion messages
+set linebreak breakindent   " Wrap a long line into multiple lines with indent
+let &showbreak = '↳ '       " Indicate line breaks
 
-" Live Preview of substitute (Neovim only)
-set inccommand=nosplit
+set inccommand=nosplit      " Live Preview of substitute (Neovim only)
 
-" Always use LaTeX flavour instead of plaintex
-let g:tex_flavor = 'latex'
+let g:tex_flavor = 'latex'  " Always use LaTeX flavour instead of plaintex
 
 " }}}
