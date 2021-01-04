@@ -25,7 +25,7 @@ augroup defaults
 				\ | endif
 
 	" Highlight yanked region (Neovim only)
-	autocmd TextYankPost * silent lua vim.highlight.on_yank{higroup = 'IncSearch', timeout = 1000}
+	autocmd TextYankPost * silent lua vim.highlight.on_yank{timeout = 1000, on_visual = false}
 augroup END
 
 " }}}
@@ -33,7 +33,6 @@ augroup END
 
 " EditorConfig {{{
 
-set termguicolors           " Enable 24-Bit Truecolor
 set relativenumber          " Enable relative numbering for easy jumps
 set mouse=a                 " Enable full mouse support
 set scrolloff=3             " Set 3 lines to the cursor when moving vertically
