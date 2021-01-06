@@ -4,7 +4,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 if exists('g:loaded_defaults')
-	finish
+    finish
 endif
 
 let g:loaded_defaults = 1
@@ -13,19 +13,19 @@ let g:loaded_defaults = 1
 " Autocmds {{{
 
 augroup defaults
-	autocmd!
+    autocmd!
 
-	" Don't autocomment lines on <CR> or 'o/O'
-	autocmd Syntax * setlocal formatoptions-=ro
+    " Don't autocomment lines on <CR> or 'o/O'
+    autocmd Syntax * setlocal formatoptions-=ro
 
-	" Restore last file position
-	autocmd BufReadPost *
-				\ if line("'\"") >= 1 && line("'\"") <= line("$") && &ft !~# 'commit' && &diff == 0
-				\ |   exe "normal! g`\""
-				\ | endif
+    " Restore last file position
+    autocmd BufReadPost *
+                \ if line("'\"") >= 1 && line("'\"") <= line("$") && &ft !~# 'commit' && &diff == 0
+                \ |   exe "normal! g`\""
+                \ | endif
 
-	" Highlight yanked region (Neovim only)
-	autocmd TextYankPost * silent lua vim.highlight.on_yank{timeout = 1000, on_visual = false}
+    " Highlight yanked region (Neovim only)
+    autocmd TextYankPost * silent lua vim.highlight.on_yank{timeout = 1000, on_visual = false}
 augroup END
 
 " }}}
@@ -41,7 +41,7 @@ set hidden                  " Quick switch buffer without worries
 set ignorecase smartcase    " Better search
 set splitbelow splitright   " More natural split positions
 set shortmess+=Ic           " Suppress startup & completion messages
-set confirm
+set confirm                 " Confirm directly instead of retyping
 set linebreak breakindent   " Wrap a long line into multiple lines with indent
 let &showbreak = '↳ '       " Indicate line breaks
 
