@@ -41,6 +41,7 @@ set hidden                  " Quick switch buffer without worries
 set ignorecase smartcase    " Better search
 set splitbelow splitright   " More natural split positions
 set shortmess+=Ic           " Suppress startup & completion messages
+set confirm
 set linebreak breakindent   " Wrap a long line into multiple lines with indent
 let &showbreak = '↳ '       " Indicate line breaks
 
