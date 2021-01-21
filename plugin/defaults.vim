@@ -25,7 +25,7 @@ augroup defaults
                 \ | endif
 
     " Highlight yanked region (Neovim only)
-    autocmd TextYankPost * silent lua vim.highlight.on_yank{timeout = 1000, on_visual = false}
+    autocmd TextYankPost * silent lua vim.highlight.on_yank{timeout = 1000}
 augroup END
 
 " }}}
