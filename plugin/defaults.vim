@@ -20,8 +20,9 @@ augroup defaults
 
     " Restore last file position
     autocmd BufReadPost *
-                \ if line("'\"") >= 1 && line("'\"") <= line("$") && &ft !~# 'commit' && &diff == 0
-                \ |   exe "normal! g`\""
+                \ if line("'\"") >= 1 && line("'\"") <= line("$")
+                \ && &ft !~# 'commit' && &diff == 0
+                \ |     exe "normal! g`\""
                 \ | endif
 
     " Highlight yanked region (Neovim only)
