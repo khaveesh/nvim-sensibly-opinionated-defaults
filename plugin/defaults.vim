@@ -44,7 +44,7 @@ set splitbelow splitright   " More natural split positions
 set shortmess+=Ic           " Suppress startup & completion messages
 set confirm                 " Confirm directly instead of retyping
 set linebreak breakindent   " Wrap a long line into multiple lines with indent
-let &showbreak = '↳ '       " Indicate line breaks
+let &showbreak = '⮑  '      " Indicate line breaks
 
 set inccommand=nosplit      " Live Preview of substitute (Neovim only)
 
