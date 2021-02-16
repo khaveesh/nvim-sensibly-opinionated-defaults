@@ -43,6 +43,7 @@ set ignorecase smartcase    " Better search
 set splitbelow splitright   " More natural split positions
 set shortmess+=Ic           " Suppress startup & completion messages
 set confirm                 " Confirm directly instead of retyping
+set nojoinspaces            " One space after punctuation on join
 set linebreak breakindent   " Wrap a long line into multiple lines with indent
 let &showbreak = '⮑  '      " Indicate line breaks
 
