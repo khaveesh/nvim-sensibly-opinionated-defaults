@@ -9,7 +9,6 @@ endif
 
 let g:loaded_defaults = 1
 
-
 " Autocmds {{{
 
 augroup defaults
@@ -26,11 +25,10 @@ augroup defaults
                 \ | endif
 
     " Highlight yanked region (Neovim only)
-    autocmd TextYankPost * silent lua vim.highlight.on_yank{timeout = 1000}
+    autocmd TextYankPost * silent lua vim.highlight.on_yank({ timeout = 1000 })
 augroup END
 
 " }}}
-
 
 " EditorConfig {{{
 
