@@ -35,13 +35,15 @@ augroup END
 set relativenumber          " Enable relative numbering for easy jumps
 set mouse=a                 " Enable full mouse support
 set scrolloff=3             " Set 3 lines to the cursor when moving vertically
-set list                    " Indicate tab stops
-set hidden                  " Quick switch buffer without worries
 set ignorecase smartcase    " Better search
 set splitbelow splitright   " More natural split positions
-set shortmess+=Ic           " Suppress startup & completion messages
+set hidden                  " Quick switch buffer without worries
+set diffopt+=foldcolumn:0   " Disable extra column for folds
+set list                    " Indicate tab stops
 set confirm                 " Confirm directly instead of retyping
+set shortmess+=Ic           " Suppress startup & completion messages
 set nojoinspaces            " One space after punctuation on join
+
 set linebreak breakindent   " Wrap a long line into multiple lines with indent
 let &showbreak = '⮑  '      " Indicate line breaks
 
