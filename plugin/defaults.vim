@@ -43,6 +43,7 @@ set list                    " Indicate tab stops
 set confirm                 " Confirm directly instead of retyping
 set shortmess+=Ic           " Suppress startup & completion messages
 set nojoinspaces            " One space after punctuation on join
+set title                   " Change terminal title from vim
 
 set linebreak breakindent   " Wrap a long line into multiple lines with indent
 let &showbreak = '⮑  '      " Indicate line breaks
