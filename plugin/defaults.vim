@@ -33,14 +33,15 @@ augroup END
 " EditorConfig {{{
 
 set relativenumber          " Enable relative numbering for easy jumps
-set mouse=a                 " Enable full mouse support
+set hidden                  " Quick switch buffer without worries
+set splitbelow splitright   " More natural split positions
 set scrolloff=3             " Set 3 lines to the cursor when moving vertically
 set ignorecase smartcase    " Better search
-set splitbelow splitright   " More natural split positions
-set hidden                  " Quick switch buffer without worries
-set diffopt+=foldcolumn:0   " Disable extra column for folds
+set mouse=a                 " Enable full mouse support
 set list                    " Indicate tab stops
 set confirm                 " Confirm directly instead of retyping
+set diffopt+=foldcolumn:0   " Disable extra column for folds
+set wildmode=longest,full   " Bash-style completion
 set shortmess+=Ic           " Suppress startup & completion messages
 set nojoinspaces            " One space after punctuation on join
 set title                   " Change terminal title from vim
