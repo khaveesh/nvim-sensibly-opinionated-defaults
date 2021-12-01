@@ -26,6 +26,9 @@ augroup defaults
 
     " Highlight yanked region (Neovim only)
     autocmd TextYankPost * silent lua vim.highlight.on_yank({ timeout = 1000 })
+    
+    " Don't show line breaks for manpages
+    autocmd FileType man set showbreak=
 augroup END
 
 " }}}
