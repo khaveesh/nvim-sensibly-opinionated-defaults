@@ -33,7 +33,6 @@ augroup END
 " EditorConfig {{{
 
 set relativenumber          " Enable relative numbering for easy jumps
-set hidden                  " Quick switch buffer without worries
 set splitbelow splitright   " More natural split positions
 set scrolloff=3             " Set 3 lines to the cursor when moving vertically
 set ignorecase smartcase    " Better search
@@ -43,13 +42,10 @@ set confirm                 " Confirm directly instead of retyping
 set diffopt+=foldcolumn:0   " Disable extra column for folds
 set wildmode=longest,full   " Bash-style completion
 set shortmess+=Ic           " Suppress startup & completion messages
-set nojoinspaces            " One space after punctuation on join
 set title                   " Change terminal title from vim
 
 set linebreak breakindent   " Wrap a long line into multiple lines with indent
 let &showbreak = '⮑  '      " Indicate line breaks
-
-set inccommand=nosplit      " Live Preview of substitute (Neovim only)
 
 let g:tex_flavor = 'latex'  " Always use LaTeX flavour instead of plaintex
 
