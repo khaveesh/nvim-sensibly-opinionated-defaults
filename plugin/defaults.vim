@@ -25,8 +25,8 @@ augroup defaults
                 \ | endif
 
     " Highlight yanked region (Neovim only)
-    autocmd TextYankPost * silent lua vim.highlight.on_yank({ timeout = 1000 })
-    
+    autocmd TextYankPost * silent lua vim.highlight.on_yank()
+
     " Don't show line breaks for manpages
     autocmd FileType man set showbreak=
 augroup END
@@ -47,8 +47,8 @@ set wildmode=longest,full   " Bash-style completion
 set shortmess+=Ic           " Suppress startup & completion messages
 set title                   " Change terminal title from vim
 
-set linebreak breakindent   " Wrap a long line into multiple lines with indent
-let &showbreak = '⮑  '      " Indicate line breaks
+set linebreak breakindent   " Soft wrap a long line with indent
+let &showbreak = '⮑  '      " Indicator for line breaks
 
 let g:tex_flavor = 'latex'  " Always use LaTeX flavour instead of plaintex
 
