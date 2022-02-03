@@ -20,7 +20,7 @@ augroup defaults
     " Restore last file position
     autocmd BufReadPost *
                 \ if line("'\"") >= 1 && line("'\"") <= line("$")
-                \ && &ft !~# 'commit' && &diff == 0
+                \     && &ft !~# 'commit' && &diff == 0
                 \ |     exe "normal! g`\""
                 \ | endif
 
@@ -28,7 +28,7 @@ augroup defaults
     autocmd TextYankPost * silent lua vim.highlight.on_yank()
 
     " Don't show line breaks for manpages
-    autocmd FileType man set showbreak=
+    autocmd FileType man set showbreak&
 augroup END
 
 " }}}
@@ -53,3 +53,5 @@ let &showbreak = '⮑  '      " Indicator for line breaks
 let g:tex_flavor = 'latex'  " Always use LaTeX flavour instead of plaintex
 
 " }}}
+
+" vim: foldmethod=marker
