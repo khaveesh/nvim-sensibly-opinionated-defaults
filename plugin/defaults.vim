@@ -4,7 +4,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 if exists('g:loaded_defaults')
-    finish
+  finish
 endif
 
 let g:loaded_defaults = 1
@@ -12,23 +12,23 @@ let g:loaded_defaults = 1
 " Autocmds {{{
 
 augroup defaults
-    autocmd!
+  autocmd!
 
-    " Don't autocomment lines on <CR> or 'o/O'
-    autocmd Syntax * setlocal formatoptions-=ro
+  " Don't auto comment lines on <CR> or 'o/O'
+  autocmd Syntax * setlocal formatoptions-=ro
 
-    " Restore last file position
-    autocmd BufReadPost *
-                \ if line("'\"") >= 1 && line("'\"") <= line("$")
-                \     && &ft !~# 'commit' && &diff == 0
-                \ |     exe "normal! g`\""
-                \ | endif
+  " Restore last file position
+  autocmd BufReadPost *
+        \ if line("'\"") >= 1 && line("'\"") <= line("$")
+        \   && &ft !~# 'commit' && &diff == 0
+        \ |   exe "normal! g`\""
+        \ | endif
 
-    " Highlight yanked region (Neovim only)
-    autocmd TextYankPost * silent lua vim.highlight.on_yank()
+  " Highlight yanked region (Neovim only)
+  autocmd TextYankPost * silent lua vim.highlight.on_yank()
 
-    " Don't show line breaks for manpages
-    autocmd FileType man set showbreak&
+  " Don't show line breaks for man pages
+  autocmd FileType man set showbreak&
 augroup END
 
 " }}}
@@ -44,7 +44,7 @@ set list                    " Indicate tab stops
 set confirm                 " Confirm directly instead of retyping
 set diffopt+=foldcolumn:0   " Disable extra column for folds
 set wildmode=longest,full   " Bash-style completion
-set shortmess+=Ic           " Suppress startup & completion messages
+set shortmess+=Ic           " Suppress start-up & completion messages
 set title                   " Change terminal title from vim
 
 set linebreak breakindent   " Soft wrap a long line with indent
