@@ -48,7 +48,7 @@ set shortmess+=Ic           " Suppress start-up & completion messages
 set title                   " Change terminal title from vim
 
 set linebreak breakindent   " Soft wrap a long line with indent
-let &showbreak = '⮑  '      " Indicator for line breaks
+let &showbreak = '↳ '       " Indicator for line breaks
 
 let g:tex_flavor = 'latex'  " Always use LaTeX flavour instead of plaintex
 
